@@ -1,0 +1,10 @@
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PodolsApi.csprojAssemblyReference.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PodolsApi.AssemblyInfoInputs.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PodolsApi.AssemblyInfo.cs
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PodolsApi.csproj.CoreCompileInputs.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PodolsApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PodolsApi\obj\Debug\netcoreapp3.1\PodolsApi.csprojAssemblyReference.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PodolsApi\obj\Debug\netcoreapp3.1\PodolsApi.AssemblyInfoInputs.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PodolsApi\obj\Debug\netcoreapp3.1\PodolsApi.AssemblyInfo.cs
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PodolsApi\obj\Debug\netcoreapp3.1\PodolsApi.csproj.CoreCompileInputs.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PodolsApi\obj\Debug\netcoreapp3.1\PodolsApi.MvcApplicationPartsAssemblyInfo.cache
