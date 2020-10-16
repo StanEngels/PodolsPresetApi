@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kd86kzlDcHIJbqg4GYhJ5tJmulSr1Q2ThrxnDSxQv9cO47dyGBiFAJiXY1hUJgBtLU27ZQU6P7/0R7FF16TN4Q==",
+  "dgSpecHash": "2SYT5HIvK/s4XFEp7hN/u7s8ihGmTU/voIko0Z2kBT+vpZIGGClMegpbydtEQfIiixLGzrwNvyqkFKyEh9R4fg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj",
+  "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
