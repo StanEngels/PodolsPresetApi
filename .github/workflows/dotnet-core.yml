@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-publish:
 
     runs-on: ubuntu-latest
 
@@ -23,3 +23,16 @@ jobs:
       run: dotnet build ./PresetApi/PresetApi --configuration Release --no-restore
     - name: Test
       run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal
+    - name: docker build
+      uses: actions/docker/cli@master
+      with:
+          args: build -t Podols/PresetApi .
+    - name: docker login
+      uses: actions/docker/login@master
+      env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+    - name: docker push
+      uses: actions/docker/cli@master
+      with:
+          args: push Podols/PresetApi
