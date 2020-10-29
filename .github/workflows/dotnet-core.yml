@@ -23,16 +23,20 @@ jobs:
       run: dotnet build ./PresetApi/PresetApi --configuration Release --no-restore
     - name: Test
       run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal
-    - name: docker build
-      uses: actions/docker/cli@master
-      with:
-          args: build -t Podols/PresetApi .
-    - name: docker login
-      uses: actions/docker/login@master
+    - name: Docker Registry
       env:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_REGISTRY_URL: ${{ secrets.DOCKER_REGISTRY_URL }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    - name: docker push
-      uses: actions/docker/cli@master
-      with:
-          args: push Podols/PresetApi
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD $DOCKER_REGISTRY_URL
+    - name: Building Docker Image
+      env:
+          CONTAINER_IMAGE_NAME: ${{ secrets.CONTAINER_IMAGE_NAME }}
+          DOCKER_REGISTRY_URL: ${{ secrets.DOCKER_REGISTRY_URL }}
+      run:
+          docker build --build-arg --no-cache -t $DOCKER_REGISTRY_URL/$CONTAINER_IMAGE_NAME:latest .
+    - name: Push Docker Container to Registry
+      env:
+          CONTAINER_IMAGE_NAME: ${{ secrets.CONTAINER_IMAGE_NAME }}
+          DOCKER_REGISTRY_URL: ${{ secrets.DOCKER_REGISTRY_URL }}
+      run: docker push $DOCKER_REGISTRY_URL/$CONTAINER_IMAGE_NAME:latest
