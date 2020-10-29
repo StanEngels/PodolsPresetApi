@@ -30,10 +30,10 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build :latest
-      run: docker build -t stanengels/podolspresetapi/presetapi/presetapi:latest .
+    - name: Build
+      run: docker build -t stanengels/podolspresetapi/presetapi/presetapi .
 
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
       with:
-        args: push stanengels/podolspresetapi/presetapi/presetapi:latest
+        args: push stanengels/podolspresetapi/presetapi/presetapi
