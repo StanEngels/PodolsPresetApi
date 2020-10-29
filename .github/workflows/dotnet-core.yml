@@ -36,4 +36,4 @@ jobs:
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
       with:
-        args: push ${GITHUB_REPOSITORY}:latest
+        args: push ${GITHUB_REPOSITORY}/PresetApi/PresetApi:latest
