@@ -31,7 +31,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build
-      run: docker build -t podols/presetapi /PresetApi/PresetApi
+      run: docker build -t podols/presetapi ./PresetApi/PresetApi
 
     - name: Push to docker hub :latest
       uses: actions-hub/docker@master
