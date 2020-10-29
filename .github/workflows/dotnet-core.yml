@@ -22,16 +22,18 @@ jobs:
     - name: Build
       run: dotnet build ./PresetApi/PresetApi --configuration Release --no-restore
     - name: Test
-      run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal
-    - name: Docker login
-      uses: actions/docker/login@master
+      run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal\
+    - uses: actions/checkout@master
+    - name: Login to docker hub
+      uses: actions-hub/docker/login@master
       env:
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-    - name: Building Docker Image
-      run:
-          docker build --build-arg --no-cache -t Podols/PresetApi:latest .
-    - name: Push Docker Container to Registry
-      uses: actions/docker/cli@master
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build :latest
+      run: docker build -t ${GITHUB_REPOSITORY}:latest .
+
+    - name: Push to docker hub :latest
+      uses: actions-hub/docker@master
       with:
-          args: push Podols/PresetApi:latest
+        args: push ${GITHUB_REPOSITORY}:latest
