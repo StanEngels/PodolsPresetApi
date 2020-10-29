@@ -20,6 +20,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore ./PresetApi/PresetApi
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ./PresetApi/PresetApi --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal
