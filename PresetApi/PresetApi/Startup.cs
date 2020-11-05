@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using PresetApi.Models;
+using PresetApi.Interfaces;
+using PresetApi.Classes;
 
 namespace PresetApi
 {
@@ -29,6 +31,7 @@ namespace PresetApi
         {
             services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Configuration.GetConnectionString("PodolsPresetDB")));
             services.AddControllers();
+            services.AddScoped<IPresetDbAccess, PresetDbAcces>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

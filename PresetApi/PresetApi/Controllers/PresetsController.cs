@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PresetApi.Interfaces;
 using PresetApi.Models;
 
 namespace PresetApi.Controllers
@@ -13,64 +14,32 @@ namespace PresetApi.Controllers
     [ApiController]
     public class PresetsController : ControllerBase
     {
-        private readonly PresetApiContext _context;
+        private readonly IPresetDbAccess _presetDb;
 
-        public PresetsController(PresetApiContext context)
+        public PresetsController(IPresetDbAccess context)
         {
-            _context = context;
+            _presetDb = context;
         }
 
         // GET: api/Presets
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Preset>>> GetPresets()
+        public async Task<ActionResult<List<Preset>>> GetPresets()
         {
-            return await _context.Presets.ToListAsync();
+            return await _presetDb.GetPresets();
         }
 
         // GET: api/Presets/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Preset>> GetPreset(int id)
         {
-            var preset = await _context.Presets.FindAsync(id);
+            var preset = await _presetDb.GetPreset(id);
 
             if (preset == null)
             {
                 return NotFound();
             }
 
-            return preset;
-        }
-
-        // PUT: api/Presets/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutPreset(int id, Preset preset)
-        {
-            if (id != preset.id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(preset).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PresetExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return Ok(preset);
         }
 
         // POST: api/Presets
@@ -79,8 +48,7 @@ namespace PresetApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Preset>> PostPreset(Preset preset)
         {
-            _context.Presets.Add(preset);
-            await _context.SaveChangesAsync();
+            await _presetDb.PostPreset(preset);
 
             return CreatedAtAction("GetPreset", new { id = preset.id }, preset);
         }
@@ -89,21 +57,15 @@ namespace PresetApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Preset>> DeletePreset(int id)
         {
-            var preset = await _context.Presets.FindAsync(id);
+            var preset = await _presetDb.PresetExists(id);
             if (preset == null)
             {
                 return NotFound();
             }
 
-            _context.Presets.Remove(preset);
-            await _context.SaveChangesAsync();
+            await _presetDb.DeletePreset(preset);
 
             return preset;
-        }
-
-        private bool PresetExists(int id)
-        {
-            return _context.Presets.Any(e => e.id == id);
         }
     }
 }

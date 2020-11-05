@@ -153,5 +153,11 @@ C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\De
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.csproj.CoreCompileInputs.cache
-C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\xunit.abstractions.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\xunit.assert.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\xunit.core.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\xunit.execution.dotnet.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.csproj.CoreCompileInputs.cache
+C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.MvcApplicationPartsAssemblyInfo.cache
