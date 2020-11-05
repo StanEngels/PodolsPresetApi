@@ -19,4 +19,4 @@ ENV ASPNETCORE_URLS=https://+:5001
 EXPOSE 5000 5001
 WORKDIR /PresetApi
 COPY --from=build-env /PresetApi/out .
-ENTRYPOINT ["./PresetApi"]
+ENTRYPOINT ["/PresetApi"]

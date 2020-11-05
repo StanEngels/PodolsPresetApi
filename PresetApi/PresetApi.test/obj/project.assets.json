@@ -29,18 +29,6 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
-      "FakeItEasy/5.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "4.3.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/FakeItEasy.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FakeItEasy.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1144,41 +1132,6 @@
             "assetType": "runtime",
             "rid": "win"
           }
-        }
-      },
-      "MockQueryable.Core/3.1.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/MockQueryable.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MockQueryable.Core.dll": {}
-        }
-      },
-      "MockQueryable.EntityFrameworkCore/3.1.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.1",
-          "MockQueryable.Core": "3.1.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/MockQueryable.EntityFrameworkCore.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MockQueryable.EntityFrameworkCore.dll": {}
-        }
-      },
-      "MockQueryable.FakeItEasy/3.1.3": {
-        "type": "package",
-        "dependencies": {
-          "FakeItEasy": "5.1.1",
-          "MockQueryable.EntityFrameworkCore": "3.1.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/MockQueryable.FakeItEasy.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MockQueryable.FakeItEasy.dll": {}
         }
       },
       "Moq/4.14.7": {
@@ -3240,6 +3193,7 @@
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.9",
+          "Microsoft.NET.Test.Sdk": "16.7.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Moq": "4.14.7",
           "Pomelo.EntityFrameworkCore.MySql": "3.2.4",
@@ -3313,29 +3267,6 @@
         "coverlet-icon.png",
         "coverlet.collector.1.3.0.nupkg.sha512",
         "coverlet.collector.nuspec"
-      ]
-    },
-    "FakeItEasy/5.1.1": {
-      "sha512": "mV6824W/GzgZnTyTmlynbdgzQ4V5mYetd9WWElh7MF1zymckC3+9gclWs3FElD3khaU4OF7aizJ1Gebk3FfnUw==",
-      "type": "package",
-      "path": "fakeiteasy/5.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fakeiteasy.5.1.1.nupkg.sha512",
-        "fakeiteasy.nuspec",
-        "lib/net40/FakeItEasy.dll",
-        "lib/net40/FakeItEasy.pdb",
-        "lib/net40/FakeItEasy.xml",
-        "lib/net45/FakeItEasy.dll",
-        "lib/net45/FakeItEasy.pdb",
-        "lib/net45/FakeItEasy.xml",
-        "lib/netstandard1.6/FakeItEasy.dll",
-        "lib/netstandard1.6/FakeItEasy.pdb",
-        "lib/netstandard1.6/FakeItEasy.xml",
-        "lib/netstandard2.0/FakeItEasy.dll",
-        "lib/netstandard2.0/FakeItEasy.pdb",
-        "lib/netstandard2.0/FakeItEasy.xml"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -5026,48 +4957,6 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "MockQueryable.Core/3.1.3": {
-      "sha512": "77umsr96u6nT/a+1G0U+jToVTl/jaMddBv+W4X8yu8/pj6HGBdc8j/aCkXCmiJuob6mM10gptGq/x5GO/eIXFg==",
-      "type": "package",
-      "path": "mockqueryable.core/3.1.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/netstandard2.0/MockQueryable.Core.dll",
-        "logo.png",
-        "mockqueryable.core.3.1.3.nupkg.sha512",
-        "mockqueryable.core.nuspec"
-      ]
-    },
-    "MockQueryable.EntityFrameworkCore/3.1.3": {
-      "sha512": "3KNpNttlxMtFQVdk82lrefxKiZ5lKNVVuDQdqnJZDTMZ1LlalDAnuP2kkXswCb7eAy5a/UEZgo4D9iVPVhLPfQ==",
-      "type": "package",
-      "path": "mockqueryable.entityframeworkcore/3.1.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/netstandard2.0/MockQueryable.EntityFrameworkCore.dll",
-        "logo.png",
-        "mockqueryable.entityframeworkcore.3.1.3.nupkg.sha512",
-        "mockqueryable.entityframeworkcore.nuspec"
-      ]
-    },
-    "MockQueryable.FakeItEasy/3.1.3": {
-      "sha512": "ZEwX7P0pexpwzUbjq8PLAzdQQRlJ3t5YjU8AmkgPUdPuVO4HMp7GN5X0L17rIzVwFKpXxFxqbOvpHS0Tb1mXdA==",
-      "type": "package",
-      "path": "mockqueryable.fakeiteasy/3.1.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/netstandard2.0/MockQueryable.FakeItEasy.dll",
-        "logo.png",
-        "mockqueryable.fakeiteasy.3.1.3.nupkg.sha512",
-        "mockqueryable.fakeiteasy.nuspec"
       ]
     },
     "Moq/4.14.7": {
@@ -10005,7 +9894,6 @@
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
-      "MockQueryable.FakeItEasy >= 3.1.3",
       "Moq >= 4.14.7",
       "PresetApi >= 1.0.0",
       "coverlet.collector >= 1.3.0",
@@ -10019,11 +9907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
+      "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
       "projectName": "PresetApi.test",
-      "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
+      "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
       "packagesPath": "C:\\Users\\stane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\obj\\",
+      "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10039,8 +9927,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj": {
-              "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj"
+            "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj": {
+              "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj"
             }
           }
         }
@@ -10065,10 +9953,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.4, )"
-          },
-          "MockQueryable.FakeItEasy": {
-            "target": "Package",
-            "version": "[3.1.3, )"
           },
           "Moq": {
             "target": "Package",
@@ -10102,9 +9986,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
