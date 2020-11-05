@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: 3.1
     - name: Install dependencies
-      run: dotnet restore ./PresetApi/PresetApi
+      run: dotnet restore ./PresetApi
     - name: Build
       run: dotnet build ./PresetApi/PresetApi --configuration Release --no-restore
     - name: Test
-      run: dotnet test ./PresetApi/PresetApi.test --no-restore --verbosity normal\
+      run: dotnet test ./PresetApi/PresetApi --no-restore --verbosity normal\
 
     -
       name: Checkout
