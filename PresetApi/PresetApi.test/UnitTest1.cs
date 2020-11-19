@@ -15,8 +15,8 @@ namespace PresetApi.test
     public class UnitTest1
     {
         [Theory]
-        [MemberData(nameof(TestGetPresetDataSet))]
-        public async void TestGetUserData(List<Preset> expectedPreset)
+        [MemberData(nameof(TestGetAllPresetDataSet))]
+        public async void TestGetAllPresetData(List<Preset> expectedPreset)
         {
             //Arange
             PresetsDbAccessMock presetsDbAccessMock = new PresetsDbAccessMock();
@@ -31,7 +31,7 @@ namespace PresetApi.test
             //Assert.Equal(new OkResult(), result.Result);
         }
 
-        public static IEnumerable<object[]> TestGetPresetDataSet()
+        public static IEnumerable<object[]> TestGetAllPresetDataSet()
         {
             List<object[]> result = new List<object[]>();
             List<Preset> presetList = new List<Preset>();
