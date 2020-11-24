@@ -26,7 +26,7 @@ namespace PresetApi.test
             ActionResult<List<Preset>> result = await presetController.GetPresets();
 
             //Assert
-            Assert.NotNull(result.Value);
+            Assert.Null(result.Value);
             Assert.Equal(result.Value[0].presetName, expectedPreset[0].presetName);
         }
 
