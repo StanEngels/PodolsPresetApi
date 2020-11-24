@@ -1,6 +1,5 @@
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\PresetApi.deps.json
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\PresetApi.runtimeconfig.json
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\PresetApi.runtimeconfig.dev.json
@@ -239,3 +238,4 @@ C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\De
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\stane\Documents\repos\podols\podolspresetapi\PresetApi\PresetApi\bin\Debug\netcoreapp3.1\PresetApi.exe
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\PresetApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\PresetApi.styles.css
