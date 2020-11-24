@@ -28,7 +28,6 @@ namespace PresetApi.test
             //Assert
             Assert.NotNull(result.Value);
             Assert.Equal(result.Value[0].presetName, expectedPreset[0].presetName);
-            //Assert.Equal(new OkResult(), result.Result);
         }
 
         public static IEnumerable<object[]> TestGetAllPresetDataSet()
