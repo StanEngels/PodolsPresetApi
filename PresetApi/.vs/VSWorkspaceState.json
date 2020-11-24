@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\PresetApi",
-    "\\PresetApi\\Controllers",
-    "\\PresetApi\\Migrations",
-    "\\PresetApi\\Models"
+    ""
   ],
-  "SelectedNode": "\\PresetApi\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
