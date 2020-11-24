@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fR2Ss1YVJzYiaNaVp1G7IKmAVa7b+pmEX1C/6kNQvbmV4BsLbQGk7yHARA1tFnzW/SWfFlN8NgLkIzGbKLy7zg==",
+  "dgSpecHash": "NnfzMxeBZ0Fbs4ha61U0B+lbScrTyhsqjjgJi075fUqyD+6tFgSJAQSE5OktJO9ag+A3RyPPVtaE7TSW1qWhKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
+  "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",

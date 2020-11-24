@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj": {}
+    "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj": {
+    "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
+        "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
         "projectName": "PresetApi.test",
-        "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
+        "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\PresetApi.test.csproj",
         "packagesPath": "C:\\Users\\stane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi.test\\obj\\",
+        "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj": {
-                "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj"
+              "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj": {
+                "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj"
               }
             }
           }
@@ -88,9 +88,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -99,14 +96,14 @@
         }
       }
     },
-    "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj": {
+    "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj",
+        "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj",
         "projectName": "PresetApi",
-        "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\PresetApi.csproj",
+        "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj",
         "packagesPath": "C:\\Users\\stane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\podolspresetapi\\PresetApi\\PresetApi\\obj\\",
+        "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\stane\\AppData\\Roaming\\NuGet\\NuGet.Config",

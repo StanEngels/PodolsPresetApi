@@ -20,9 +20,9 @@
               "resultFile": {
                 "uri": "file:///C:/Users/stane/Documents/repos/podols/PodolsPresetApi/PresetApi/PresetApi.test/UnitTest1.cs",
                 "region": {
-                  "startLine": 51,
+                  "startLine": 50,
                   "startColumn": 45,
-                  "endLine": 51,
+                  "endLine": 50,
                   "endColumn": 55
                 }
               }
