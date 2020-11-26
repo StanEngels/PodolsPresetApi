@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using PresetApi.Controllers;
-using PresetApi.Models;
-using System;
+﻿using PresetApi.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PresetApi.Interfaces
