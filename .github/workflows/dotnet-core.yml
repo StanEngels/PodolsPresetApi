@@ -48,7 +48,7 @@ jobs:
         path: ./PresetApi
         repository: sengels/podolspresetapi
         tags: latest
-    
+
   sonarcloud:
     name: SonarCloud
     runs-on: windows-latest
@@ -93,5 +93,5 @@ jobs:
           # on the project dashboard in SonarCloud.
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"StanEngels_PodolsPresetApi" /o:"stanengels" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build
+          dotnet build PresetApi.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
