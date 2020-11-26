@@ -8,13 +8,13 @@ using PresetApi.Models;
 namespace PresetApi.Migrations
 {
     [DbContext(typeof(PresetApiContext))]
-    partial class PresetContextModelSnapshot : ModelSnapshot
+    partial class PresetApiContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("PresetApi.Models.Effect", b =>

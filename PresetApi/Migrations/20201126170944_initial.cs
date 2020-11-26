@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PresetApi.Migrations
 {
-    public partial class InitialMigrationV2 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,6 +18,20 @@ namespace PresetApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Effects", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Presets",
+                columns: table => new
+                {
+                    id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    accountId = table.Column<int>(nullable: false),
+                    presetName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Presets", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -64,6 +78,9 @@ namespace PresetApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Effects");
+
+            migrationBuilder.DropTable(
+                name: "Presets");
         }
     }
 }

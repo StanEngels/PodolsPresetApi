@@ -9,14 +9,14 @@ using PresetApi.Models;
 namespace PresetApi.Migrations
 {
     [DbContext(typeof(PresetApiContext))]
-    [Migration("20201013114326_InitialMigrationV2")]
-    partial class InitialMigrationV2
+    [Migration("20201126170944_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("PresetApi.Models.Effect", b =>
