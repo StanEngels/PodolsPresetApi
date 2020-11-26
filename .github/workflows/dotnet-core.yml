@@ -88,3 +88,4 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"StanEngels_PodolsPresetApi" /o:"stanengels" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
