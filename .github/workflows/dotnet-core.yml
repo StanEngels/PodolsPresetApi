@@ -48,6 +48,10 @@ jobs:
         path: ./PresetApi
         repository: sengels/podolspresetapi
         tags: latest
+    - name: get heroku
+      run: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+    - name: login to heroku and push, release container
+      run: heroku create --buildpack https://github.com/timshadel/heroku-buildpack-github-netrc.git
 
   sonarcloud:
     name: SonarCloud Build and Scan
