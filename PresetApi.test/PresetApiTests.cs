@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PresetApi.test
 {
-    public class UnitTest1
+    public class PresetApiTests
     {
         [Theory]
         [MemberData(nameof(TestGetAllPresetDataSet))]

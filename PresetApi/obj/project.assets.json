@@ -9952,11 +9952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj",
+      "projectUniqueName": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.csproj",
       "projectName": "PresetApi",
-      "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\PresetApi.csproj",
+      "projectPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.csproj",
       "packagesPath": "C:\\Users\\stane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi\\obj\\",
+      "outputPath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\stane\\AppData\\Roaming\\NuGet\\NuGet.Config",
