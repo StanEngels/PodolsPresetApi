@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PresetApi.Models
+﻿namespace PresetApi.Models
 {
     public class Effect
     {
