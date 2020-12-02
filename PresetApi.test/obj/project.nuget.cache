@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kpRo1tCbnaFOU0eKF3dXTiP3vEpq9bhzCc81DE+xA0yVh7ooGpiDcVYGExNsdem6vs9LTdXj+4TH/ctNErNDSQ==",
+  "dgSpecHash": "WopYXXh3pgb0XExGv67D9KAhnBu3O87fBE7N22/cMO6CLn5Qo/DiPTsmnj0tqY2pZbPMHBjYH3i0OSdF5XSCKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi.test\\PresetApi.test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stane\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
+    "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.10\\microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

@@ -7,6 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using PresetApi.Models;
 using PresetApi.Interfaces;
 using PresetApi.Classes;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Logging;
+using System;
+using Microsoft.AspNetCore.Http;
+using Microsoft.IdentityModel.Tokens;
 
 namespace PresetApi
 {
@@ -24,10 +29,34 @@ namespace PresetApi
         {
             services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Configuration.GetConnectionString("PodolsPresetDB")));
             services.AddControllers();
+            IdentityModelEventSource.ShowPII = true; //Add this line
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer("Bearer", o =>
+            {
+                o.Authority = "http://localhost:8080/auth/realms/PodolsPreset/";
+                o.Audience = "PodolsClient";
+                o.RequireHttpsMetadata = false;
+
+                o.Events = new JwtBearerEvents()
+                {
+                    OnAuthenticationFailed = c =>
+                    {
+                        c.NoResult();
+
+                        c.Response.StatusCode = 500;
+                        c.Response.ContentType = "text/plain";
+
+                        return c.Response.WriteAsync(c.Exception.ToString());
+                    }
+                };
+            });
             services.AddScoped<IPresetDbAccess, PresetDbAcces>();
         }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -38,6 +67,8 @@ namespace PresetApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

@@ -480,3 +480,4 @@ C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\obj\Debug\netcor
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.dll
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.pdb
 C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\obj\Debug\netcoreapp3.1\PresetApi.genruntimeconfig.cache
+C:\Users\stane\Documents\repos\podols\PodolsPresetApi\PresetApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
