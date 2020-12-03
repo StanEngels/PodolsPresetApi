@@ -21,7 +21,7 @@ namespace PresetApi
         {
             Configuration = configuration;
         }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -29,6 +29,20 @@ namespace PresetApi
         {
             services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Configuration.GetConnectionString("PodolsPresetDB")));
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("https://podols.herokuapp.com/")
+                            .AllowCredentials()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .SetIsOriginAllowed((host) => true);
+                    });
+            });
+
             IdentityModelEventSource.ShowPII = true; //Add this line
             services.AddAuthentication(options =>
             {
@@ -37,7 +51,7 @@ namespace PresetApi
 
             }).AddJwtBearer("Bearer", o =>
             {
-                o.Authority = "http://localhost:8080/auth/realms/PodolsPreset/";
+                o.Authority = "http://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/";
                 o.Audience = "PodolsClient";
                 o.RequireHttpsMetadata = false;
 
@@ -71,6 +85,8 @@ namespace PresetApi
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {
