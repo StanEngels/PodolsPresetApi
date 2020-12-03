@@ -51,7 +51,7 @@ namespace PresetApi
 
             }).AddJwtBearer("Bearer", o =>
             {
-                o.Authority = "http://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/";
+                o.Authority = "https://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/";
                 o.Audience = "PodolsClient";
                 o.RequireHttpsMetadata = false;
 
