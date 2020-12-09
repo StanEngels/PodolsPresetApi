@@ -30,3 +30,6 @@ And run the command again
 
 ## Run the SLN file or use the "dotnet run" command
 This should run the application and make api calls available from localhost.
+
+## After this make sure you installed your frontend and start both apps
+If you haven't yet installed the front-end app there is a readme [over here](https://github.com/StanEngels/PodolsReactApp/blob/master/README.md).
