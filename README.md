@@ -33,3 +33,8 @@ This should run the application and make api calls available from localhost.
 
 ## After this make sure you installed your frontend and start both apps
 If you haven't yet installed the front-end app there is a readme [over here](https://github.com/StanEngels/PodolsReactApp/blob/master/README.md).
+
+## What to do now?
+When everything is up and running here are a few issues that are great for newcomers: [Click me!]()
+
+When you are more experience here is the normal issue board without filters: [Click me!](https://github.com/StanEngels/PodolsPresetApi/issues)
