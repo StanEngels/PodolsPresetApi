@@ -27,7 +27,7 @@ namespace PresetApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Environment.GetEnvironmentVariable("DATABASE_URL")));
+            services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
             services.AddControllers();
 
             services.AddCors(options =>
@@ -35,12 +35,7 @@ namespace PresetApi
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:3000/")
-                               .AllowCredentials()
-                               .AllowAnyHeader()
-                               .AllowAnyMethod()
-                               .SetIsOriginAllowed((host) => true);
-                        builder.WithOrigins("https://podols.herokuapp.com/")
+                        builder.WithOrigins(Environment.GetEnvironmentVariable("INCOMING_CORS_URL"))
                             .AllowCredentials()
                             .AllowAnyHeader()
                             .AllowAnyMethod()
@@ -56,8 +51,8 @@ namespace PresetApi
 
             }).AddJwtBearer("Bearer", o =>
             {
-                o.Authority = "https://podols-keycloak.herokuapp.com/auth/realms/PodolsPreset/";
-                o.Audience = "PodolsClient";
+                o.Authority = Environment.GetEnvironmentVariable("KEYCLOAK_AUTHORITY_URL");
+                o.Audience = Environment.GetEnvironmentVariable("KEYCLOAK_AUDIENCE");
                 o.RequireHttpsMetadata = false;
 
                 o.Events = new JwtBearerEvents()
