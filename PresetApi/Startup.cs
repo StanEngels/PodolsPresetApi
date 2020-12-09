@@ -27,7 +27,7 @@ namespace PresetApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Configuration.GetConnectionString("PodolsPresetDB")));
+            services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Environment.GetEnvironmentVariable("DATABASE_URL")));
             services.AddControllers();
 
             services.AddCors(options =>
@@ -35,6 +35,11 @@ namespace PresetApi
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
+                        builder.WithOrigins("http://localhost:3000/")
+                               .AllowCredentials()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod()
+                               .SetIsOriginAllowed((host) => true);
                         builder.WithOrigins("https://podols.herokuapp.com/")
                             .AllowCredentials()
                             .AllowAnyHeader()
