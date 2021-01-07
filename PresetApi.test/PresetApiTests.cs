@@ -6,6 +6,7 @@ using PresetApi.Controllers;
 using System.Threading.Tasks;
 using PresetApi.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace PresetApi.test
 {
@@ -20,11 +21,12 @@ namespace PresetApi.test
             PresetsController presetController = new PresetsController(presetsDbAccessMock);
 
             //Act
-            ActionResult<List<Preset>> result = await presetController.GetPresets();
+            ActionResult<IList<Preset>> result = await presetController.GetPresets();
 
             //Assert
-            Assert.NotNull(result.Value);
+            Assert.NotNull(result);
             Assert.Equal(result.Value[0].presetName, expectedPreset[0].presetName);
+            Assert.Equal(result.Value[1].presetName, expectedPreset[1].presetName);
         }
 
         public static IEnumerable<object[]> TestGetAllPresetDataSet()
@@ -36,8 +38,13 @@ namespace PresetApi.test
             {
                 presetName = "Test"
             };
+            Preset preset2 = new Preset
+            {
+                presetName = "Test2"
+            };
 
             presetList.Add(preset);
+            presetList.Add(preset2);
             result.Add(new object[] { presetList });
             return result;
         }
@@ -51,7 +58,12 @@ namespace PresetApi.test
                 {
                     presetName = "Test"
                 };
+                Preset presetReturn2 = new Preset
+                {
+                    presetName = "Test2"
+                };
                 testList.Add(presetReturn);
+                testList.Add(presetReturn2);
                 return testList;
             }
 

@@ -25,9 +25,16 @@ namespace PresetApi.Controllers
         // GET: api/Presets
         [Authorize]
         [HttpGet]
-        public async Task<ActionResult<List<Preset>>> GetPresets()
+        public async Task<ActionResult<IList<Preset>>> GetPresets()
         {
-            return await _presetDb.GetPresets();
+            var presets = await _presetDb.GetPresets();
+
+            if (!presets.Any())
+            {
+                return NotFound();
+            }
+            
+            return presets;
         }
 
         // GET: api/Presets/5

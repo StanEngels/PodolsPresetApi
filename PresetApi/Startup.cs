@@ -17,9 +17,13 @@ namespace PresetApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup() // (IConfiguration configuration)
         {
-            Configuration = configuration;
+            //Configuration = configuration;
+            Configuration = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", false, true)
+                .Build();
         }
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public IConfiguration Configuration { get; }
@@ -29,17 +33,27 @@ namespace PresetApi
         {
             services.AddDbContext<PresetApiContext>(opt => opt.UseMySql(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
             services.AddControllers();
-
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins(Environment.GetEnvironmentVariable("INCOMING_CORS_URL"))
-                            .AllowCredentials()
-                            .AllowAnyHeader()
-                            .AllowAnyMethod()
-                            .SetIsOriginAllowed((host) => true);
+                        if (Environment.GetEnvironmentVariable("INCOMING_CORS_URL") == null) 
+                        {
+                            builder.WithOrigins("https://0.0.0.0:5001")
+                                .AllowCredentials()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .SetIsOriginAllowed((host) => true);
+                        }
+                        else
+                        {
+                            builder.WithOrigins(Environment.GetEnvironmentVariable("INCOMING_CORS_URL"))
+                                .AllowCredentials()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .SetIsOriginAllowed((host) => true);
+                        }
                     });
             });
 
@@ -55,18 +69,20 @@ namespace PresetApi
                 o.Audience = Environment.GetEnvironmentVariable("KEYCLOAK_AUDIENCE");
                 o.RequireHttpsMetadata = false;
 
-                o.Events = new JwtBearerEvents()
-                {
-                    OnAuthenticationFailed = c =>
-                    {
-                        c.NoResult();
 
-                        c.Response.StatusCode = 500;
-                        c.Response.ContentType = "text/plain";
-
-                        return c.Response.WriteAsync(c.Exception.ToString());
-                    }
-                };
+                //Debug code/
+                //o.Events = new JwtBearerEvents()
+                //{
+                //    OnAuthenticationFailed = c =>
+                //    {
+                //        c.NoResult();
+                //
+                //        c.Response.StatusCode = 500;
+                //        c.Response.ContentType = "text/plain";
+                //
+                //        return c.Response.WriteAsync(c.Exception.ToString());
+                //    }
+                //};
             });
             services.AddScoped<IPresetDbAccess, PresetDbAcces>();
         }
@@ -82,11 +98,11 @@ namespace PresetApi
 
             app.UseRouting();
 
+            app.UseCors(MyAllowSpecificOrigins);
+
             app.UseAuthentication();
 
             app.UseAuthorization();
-
-            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {

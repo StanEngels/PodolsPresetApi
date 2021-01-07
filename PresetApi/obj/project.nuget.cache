@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EZNcN5LB9jNHD1MLxVdqEyzdLuKXEsUynOc3at9k+csc/GRDSPh6QvkruHhygYKrrSIFUuiQ4yS8QCSe6Il/8A==",
+  "dgSpecHash": "7h29hkXLSFBsJJakDHzY8Me0DV2r5Y/5UMZ0S1mJ8V9zUqCP1zpT8Gk2EflTIdjUvlvxOdTPVMsjIktOKLIh+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\stane\\Documents\\repos\\podols\\PodolsPresetApi\\PresetApi\\PresetApi.csproj",
   "expectedPackageFiles": [
@@ -193,7 +193,9 @@
     "C:\\Users\\stane\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\stane\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "C:\\Users\\stane\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+    "C:\\Users\\stane\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512",
+    "C:\\Users\\stane\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\stane\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
